@@ -22,9 +22,6 @@ setcookie("stripeToken", "", time() + (30), "/"); // 86400 = 1 day ?>
     function stripeResponseHandler(status, response) {
         var token = response['id'];
         document.cookie = "stripeToken =" + token;
-
-        <?php
-        // $token = "<script>document.write(token);</script>" ?>
     }
 </script>
 
